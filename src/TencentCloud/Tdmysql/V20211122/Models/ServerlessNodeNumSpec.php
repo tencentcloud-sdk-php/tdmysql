@@ -18,28 +18,28 @@ namespace TencentCloud\Tdmysql\V20211122\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * serverless实例的ccu规格
+ * Serverless 实例允许调整的 hybrid 节点数量上下限
  *
- * @method float getMinCcu() 获取<p>ccu最小值</p>
- * @method void setMinCcu(float $MinCcu) 设置<p>ccu最小值</p>
- * @method array getMaxCcu() 获取<p>ccu最大值范围</p>
- * @method void setMaxCcu(array $MaxCcu) 设置<p>ccu最大值范围</p>
+ * @method integer getMinNodeNum() 获取<p>最小节点数</p>
+ * @method void setMinNodeNum(integer $MinNodeNum) 设置<p>最小节点数</p>
+ * @method integer getMaxNodeNum() 获取<p>最大节点数</p>
+ * @method void setMaxNodeNum(integer $MaxNodeNum) 设置<p>最大节点数</p>
  */
-class ServerlessCcu extends AbstractModel
+class ServerlessNodeNumSpec extends AbstractModel
 {
     /**
-     * @var float <p>ccu最小值</p>
+     * @var integer <p>最小节点数</p>
      */
-    public $MinCcu;
+    public $MinNodeNum;
 
     /**
-     * @var array <p>ccu最大值范围</p>
+     * @var integer <p>最大节点数</p>
      */
-    public $MaxCcu;
+    public $MaxNodeNum;
 
     /**
-     * @param float $MinCcu <p>ccu最小值</p>
-     * @param array $MaxCcu <p>ccu最大值范围</p>
+     * @param integer $MinNodeNum <p>最小节点数</p>
+     * @param integer $MaxNodeNum <p>最大节点数</p>
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class ServerlessCcu extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MinCcu",$param) and $param["MinCcu"] !== null) {
-            $this->MinCcu = $param["MinCcu"];
+        if (array_key_exists("MinNodeNum",$param) and $param["MinNodeNum"] !== null) {
+            $this->MinNodeNum = $param["MinNodeNum"];
         }
 
-        if (array_key_exists("MaxCcu",$param) and $param["MaxCcu"] !== null) {
-            $this->MaxCcu = $param["MaxCcu"];
+        if (array_key_exists("MaxNodeNum",$param) and $param["MaxNodeNum"] !== null) {
+            $this->MaxNodeNum = $param["MaxNodeNum"];
         }
     }
 }
